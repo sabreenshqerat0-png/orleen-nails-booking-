@@ -1,146 +1,222 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORLEEN NAILS - حجز المواعيد</title>
-    <style>
-        body {
-            font-family: 'Tahoma', Arial, sans-serif;
-            background-color: #fcf4f6;
-            margin: 0;
-            padding: 0;
-            direction: rtl;
-            color: #4a3b40;
-        }
-        .container {
-            max-width: 650px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(219, 150, 165, 0.15);
-            border: 1px solid #f2d6de;
-        }
-        .header {
-            background-color: #f7e1e8;
-            text-align: center;
-            padding: 35px 20px;
-        }
-        .header h1 {
-            color: #7b4a59;
-            margin: 0;
-            font-size: 30px;
-            letter-spacing: 1px;
-        }
-        .header p {
-            color: #9c6877;
-            margin: 8px 0 0;
-            font-size: 14px;
-        }
-        .content {
-            padding: 30px;
-        }
-        .content h2 {
-            color: #7b4a59;
-            font-size: 20px;
-            border-bottom: 2px solid #f7e1e8;
-            padding-bottom: 8px;
-            margin-top: 0;
-        }
-        .menu-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        .menu-table th, .menu-table td {
-            padding: 12px;
-            text-align: right;
-            border-bottom: 1px solid #f7e1e8;
-            font-size: 14px;
-        }
-        .menu-table th {
-            background-color: #fdf0f3;
-            color: #7b4a59;
-        }
-        .rules-box {
-            background-color: #fdf0f3;
-            border-right: 4px solid #d4839b;
-            padding: 18px;
-            margin: 25px 0;
-            border-radius: 6px;
-        }
-        .rules-box h3 {
-            color: #7b4a59;
-            margin: 0 0 10px;
-            font-size: 16px;
-        }
-        .rules-box ul {
-            margin: 0;
-            padding-right: 20px;
-            font-size: 13px;
-            color: #5c474f;
-        }
-        .rules-box li {
-            margin-bottom: 8px;
-        }
-        .footer {
-            background-color: #f7e1e8;
-            text-align: center;
-            padding: 25px;
-            font-size: 14px;
-            color: #7b4a59;
-        }
-        .contact-btn {
-            display: inline-block;
-            background-color: #d4839b;
-            color: #ffffff;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            box-shadow: 0 4px 10px rgba(212, 131, 155, 0.3);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ORLEEN NAILS | حجز المواعيد</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#fff4f7;color:#573b45;
+ font-family:Tahoma,Arial,sans-serif;
+}
+.container{max-width:600px;margin:auto;padding:18px}
+header{
+ text-align:center;padding:30px 15px;
+ background:linear-gradient(135deg,#f8d5e0,#fff0f4);
+ border-radius:22px;margin-bottom:20px;
+}
+header h1{font-size:30px;letter-spacing:2px;margin:8px}
+header p{margin:8px}
+h2{font-size:20px}
+.card{
+ background:white;padding:18px;border-radius:17px;
+ margin:14px 0;border:1px solid #f1d4df;
+ box-shadow:0 3px 12px #e7bac833;
+}
+.service{
+ display:flex;align-items:center;justify-content:space-between;
+ gap:10px;padding:13px 0;border-bottom:1px solid #f5e5eb;
+}
+.service:last-child{border:0}
+.service label{display:flex;align-items:center;gap:9px;flex:1}
+input[type=checkbox]{accent-color:#d66e91;width:19px;height:19px}
+.price{color:#c15c7e;font-weight:bold;white-space:nowrap}
+small{display:block;color:#997d87;margin-top:5px}
+input,select{
+ width:100%;padding:13px;margin:7px 0 15px;
+ border:1px solid #e7c4d0;border-radius:11px;
+ font-size:16px;background:#fffafb;color:#573b45;
+}
+button{
+ width:100%;padding:15px;border:0;border-radius:13px;
+ background:#d66e91;color:white;font-size:17px;
+ font-weight:bold;cursor:pointer;
+}
+button:disabled{opacity:.4}
+.total{
+ display:flex;justify-content:space-between;
+ padding:10px 0;font-weight:bold;
+}
+.notice{
+ background:#fff0f4;padding:15px;border-radius:13px;
+ line-height:2;font-size:14px;
+}
+.muted{color:#987c87;font-size:13px}
+footer{text-align:center;padding:20px;color:#b26b85}
+</style>
 </head>
 <body>
+<div class="container">
 
-    <div class="container">
-        <!-- رأس الموقع -->
-        <div class="header">
-            <h1>ORLEEN NAILS</h1>
-            <p>جبل المكبر، القدس | عناية ملكية وأناقة تدوم طويلاً</p>
-        </div>
+<header>
+<div style="font-size:35px">🌸</div>
+<h1>ORLEEN NAILS</h1>
+<p>جمالك يبدأ من التفاصيل 💗</p>
+<strong>احجزي موعدك بكل سهولة</strong>
+</header>
 
-        <!-- محتوى الخدمات -->
-        <div class="content">
-            <h2>قائمة الخدمات والأسعار والمدد الزمنية</h2>
-            <table class="menu-table">
-                <tr>
-                    <th>الخدمة</th>
-                    <th>المدة</th>
-                    <th>السعر</th>
-                </tr>
-                <tr>
-                    <td>جل على أظافر طبيعية</td>
-                    <td>45 دقيقة</td>
-                    <td>₪80</td>
-                </tr>
-                <tr>
-                    <td>جل روسي مبنى أناتومي</td>
-                    <td>ساعة</td>
-                    <td>₪100</td>
-                </tr>
-                <tr>
-                    <td>أظافر تركيب</td>
-                    <td>ساعة</td>
-                    <td>₪120</td>
-                </tr>
-                <tr>
-                    <td>أظافر تركيب روسي</td>
-                    <td>ساعة وربع</td>
-                    <td>₪150</td>
-                </tr>
-                <tr>
-                    
+<div class="card">
+<h2>🌷 اختاري خدماتك</h2>
+<div id="services"></div>
+<div class="service">
+<label>
+<input type="checkbox" id="freeRemoval">
+إزالة جل قديم مع تجديد الخدمة
+</label>
+<span class="price">مجاني</span>
+</div>
+<p class="muted">الإزالة مجانية عند تجديد الخدمة.</p>
+</div>
+
+<div class="card">
+<h2>💕 ملخص الحجز</h2>
+<div class="total">
+<span>السعر الإجمالي</span><span id="total">₪0</span>
+</div>
+<div class="total">
+<span>المدة الإجمالية</span><span id="duration">0 دقيقة</span>
+</div>
+</div>
+
+<div class="card">
+<h2>📅 اختاري موعدك</h2>
+<label>الاسم</label>
+<input id="name" placeholder="اسمك الكامل">
+
+<label>رقم الهاتف</label>
+<input id="phone" type="tel" placeholder="05XXXXXXXX">
+
+<label>تاريخ الحجز</label>
+<input id="date" type="date">
+
+<label>الساعة المتاحة</label>
+<select id="time">
+<option value="">اختاري الخدمات أولاً</option>
+</select>
+
+<button id="book">تأكيد طلب الحجز عبر واتساب</button>
+<p class="muted">سيتم إرسال طلبك لتأكيد الموعد.</p>
+</div>
+
+<div class="card notice">
+<strong>💕 ملاحظات مهمة قبل الحجز:</strong><br>
+• يرجى إلغاء أو تعديل الحجز قبل 24 ساعة على الأقل.<br>
+• يرجى الالتزام بالموعد وعدم التأخر.<br>
+• جميع الأيام متاحة للحجز حسب المواعيد الشاغرة.<br>
+• ساعات العمل من ٩:٣٠ صباحاً حتى ١:٠٠ ظهراً.
+</div>
+
+<footer>ORLEEN NAILS 🌸<br>شكراً لثقتك بنا</footer>
+</div>
+
+<script>
+const services=[
+{name:"جل أظافر طبيعية",price:80,min:60},
+{name:"جل روسي مبني أناتومي",price:100,min:60},
+{name:"أظافر تركيب",price:120,min:60},
+{name:"جل أجرين",price:80,min:30},
+{name:"أظافر تركيب روسي",price:150,min:90},
+{name:"تنظيف لحمية",price:30,min:15},
+{name:"إزالة جل بدون تجديد",price:50,min:30}
+];
+
+const box=document.getElementById("services");
+services.forEach((s,i)=>{
+ const div=document.createElement("div");
+ div.className="service";
+ div.innerHTML=`
+ <label><input type="checkbox" class="serviceCheck" value="${i}">
+ <span>${s.name}<small>${s.min} دقيقة</small></span></label>
+ <span class="price">₪${s.price}</span>`;
+ box.appendChild(div);
+});
+
+const checks=()=>[...document.querySelectorAll(".serviceCheck:checked")]
+ .map(x=>services[+x.value]);
+
+function calc(){
+ const chosen=checks();
+ const free=document.getElementById("freeRemoval").checked;
+ const removalOnly=chosen.length===1 && chosen[0].name==="إزالة جل بدون تجديد";
+ const price=chosen.reduce((a,s)=>a+s.price,0);
+ const mins=chosen.reduce((a,s)=>a+s.min,0);
+ const finalPrice=free&&!removalOnly?price:price;
+ document.getElementById("total").textContent="₪"+finalPrice;
+ document.getElementById("duration").textContent=mins+" دقيقة";
+ return {chosen,mins,price:finalPrice,free};
+}
+
+const date=document.getElementById("date");
+const time=document.getElementById("time");
+const now=new Date();
+date.min=[
+now.getFullYear(),
+String(now.getMonth()+1).padStart(2,"0"),
+String(now.getDate()).padStart(2,"0")
+].join("-");
+
+function update(){
+ const data=calc();
+ time.innerHTML="";
+ if(!data.chosen.length){
+ time.innerHTML='<option value="">اختاري الخدمات أولاً</option>';
+ return;
+ }
+ const start=9*60+30,end=13*60;
+ let count=0;
+ for(let t=start;t+data.mins<=end;t+=15){
+ const d=new Date();
+ const [y,m,day]=date.value.split("-").map(Number);
+ if(date.value && y===now.getFullYear() &&
+ m===now.getMonth()+1 && day===now.getDate() &&
+ t<=now.getHours()*60+now.getMinutes())continue;
+ const h=Math.floor(t/60),min=t%60;
+ const label=String(h).padStart(2,"0")+":"+String(min).padStart(2,"0");
+ time.add(new Option(label,label));
+ count++;
+ }
+ if(!count)time.innerHTML='<option value="">لا توجد مواعيد مناسبة بهذا اليوم</option>';
+}
+
+document.addEventListener("change",e=>{
+ if(e.target.classList.contains("serviceCheck")||
+ e.target.id==="freeRemoval"||e.target.id==="date")update();
+});
+
+document.getElementById("book").onclick=()=>{
+ const data=calc();
+ const name=document.getElementById("name").value.trim();
+ const phone=document.getElementById("phone").value.trim();
+ const day=date.value,slot=time.value;
+ if(!data.chosen.length)return alert("اختاري خدمة واحدة على الأقل");
+ if(!name||!phone||!day||!slot)return alert("يرجى تعبئة جميع المعلومات واختيار الموعد");
+ const list=data.chosen.map(s=>s.name).join("، ");
+ const msg=`مرحباً ORLEEN NAILS 🌸
+أرغب بحجز موعد:
+الاسم: ${name}
+الهاتف: ${phone}
+الخدمات: ${list}
+إزالة مجانية: ${data.free?"نعم":"لا"}
+التاريخ: ${day}
+الساعة: ${slot}
+السعر: ₪${data.price}
+المدة: ${data.mins} دقيقة
+بانتظار تأكيد الحجز 💗`;
+ window.open("https://wa.me/972537291172?text="+encodeURIComponent(msg),"_blank");
+};
+update();
+</script>
+</body>
+</html>
